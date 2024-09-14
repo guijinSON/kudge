@@ -19,9 +19,14 @@ def save_results(results, output_file):
     """ Save DataFrame results to a CSV file. """
     results.to_csv(output_file, index=False)
 
-def main(input_path, output_path):
+def main(input_path, data, output_path):
     """ Main execution function to process pairwise data and save results. """
-    pairwise = pd.read_csv('data/k2-eval-pairwise.csv')
+    if data == 'full':
+        data_path = f'data/k2-eval-pairwise.csv'
+    elif data == 'false_info':
+        data_path = f'data/k2-eval-pairwise-falseinfo.csv'
+        
+    pairwise = pd.read_csv(data_path)
     results = pd.DataFrame()
 
     # Ensure the output directory exists

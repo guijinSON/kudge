@@ -22,8 +22,13 @@ def process_pointwise_data(pointwise):
     }
 
 
-def main(input_path, output_path):
-    pointwise = pd.read_csv(f'data/k2-eval-pointwise.csv')
+def main(input_path, data, output_path):
+    if data == 'full':
+        data_path = f'data/k2-eval-pointwise.csv'
+    elif data == 'false_info':
+        data_path = f'data/k2-eval-pointwise-falseinfo.csv'
+        
+    pointwise = pd.read_csv(data_path)
     results = pd.DataFrame()
 
     os.makedirs(output_path, exist_ok=True)
