@@ -45,8 +45,9 @@ def main(input_path, data, output_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process pairwise data and generate results.")
     parser.add_argument("input_path", type=str, help="Path to the input data directory.")
+    parser.add_argument("subset", type=str, help="Which subset to use either full or false_info")
     parser.add_argument("output_path", type=str, help="Path to the output results directory.")
     args = parser.parse_args()
-    main(args.input_path, args.output_path)
+    main(args.input_path, args.subset, args.output_path)
 
 
