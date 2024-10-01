@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from model_utils import get_model_outputs
+from model_utils import get_model_outputs, get_model_outputs_litellm
 
 def process_queries(tokenizer, queries):
     processed_queries = []
