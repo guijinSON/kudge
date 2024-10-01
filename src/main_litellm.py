@@ -10,7 +10,7 @@ def main(mode, subset, model_name, api_key, base_url, output_path):
         data = pd.read_csv(f'data/k2-eval-{mode}.csv')
     elif subset == 'false_info':
         data = pd.read_csv(f'data/k2-eval-{mode}-falseinfo.csv')
-    elif subset == 'challenge:'
+    elif subset == 'challenge':
         data = pd.read_csv(f'data/kudge-challenge.csv')
         
     queries = data['judge_query'].values
@@ -32,7 +32,7 @@ def main(mode, subset, model_name, api_key, base_url, output_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run model inference on datasets.')
     parser.add_argument('mode', choices=['pairwise', 'pointwise'], help='Mode to process data: pairwise or pointwise')
-    parser.add_argument("subset", choices=['full', 'false_info'], help="Which subset to use either full or false_info")
+    parser.add_argument("subset", choices=['full', 'false_info','challenge'], help="Which subset to use either full or false_info")
     parser.add_argument('model_name', type=str, help='Model name to use for loading and inference')
     parser.add_argument('api_key', type=str, help='API Key for LiteLLM.')
     parser.add_argument('base_url', type=str, help='Base URL for LiteLLM.')
