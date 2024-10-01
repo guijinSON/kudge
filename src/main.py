@@ -33,7 +33,7 @@ def main(mode, subset, model_name, output_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run model inference on datasets.')
     parser.add_argument('mode', choices=['pairwise', 'pointwise'], help='Mode to process data: pairwise or pointwise')
-    parser.add_argument("subset", choices=['full', 'false_info'], help="Which subset to use either full or false_info")
+    parser.add_argument("subset", choices=['full', 'false_info','challenge'], help="Which subset to use either full, false_info, or challenge.")
     parser.add_argument('model_name', type=str, help='Model name to use for loading and inference')
     parser.add_argument('output_path', type=str, help='Path to save output results')
     args = parser.parse_args()
