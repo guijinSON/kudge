@@ -11,7 +11,7 @@ def main(mode, subset, model_name, output_path):
         data = pd.read_csv(f'data/k2-eval-{mode}.csv')
     elif subset == 'false_info':
         data = pd.read_csv(f'data/k2-eval-{mode}-falseinfo.csv')
-    elif subset == 'challenge:'
+    elif subset == 'challenge':
         data = pd.read_csv(f'data/kudge-challenge.csv')
         
     queries = process_queries(tokenizer, data['judge_query'].values)
@@ -38,5 +38,5 @@ if __name__ == "__main__":
     parser.add_argument('output_path', type=str, help='Path to save output results')
     args = parser.parse_args()
 
-    main(args.mode, args.model_name, args.output_path)
+    main(args.mode, args.subset, args.model_name, args.output_path)
 
