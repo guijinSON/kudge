@@ -11,6 +11,8 @@ def main(mode, subset, model_name, output_path):
         data = pd.read_csv(f'data/k2-eval-{mode}.csv')
     elif subset == 'false_info':
         data = pd.read_csv(f'data/k2-eval-{mode}-falseinfo.csv')
+    elif subset == 'challenge:'
+        data = pd.read_csv(f'data/kudge-challenge.csv')
         
     queries = process_queries(tokenizer, data['judge_query'].values)
     outputs = get_model_outputs(llm, queries)

@@ -1,4 +1,4 @@
-instruction,chosen_response,rejected_response,subset,judge_query,winner
+instruction,chosen_response,rejected_response,judge_query,winner,subset
 "다음 문제를 읽고, 정답으로 가장 알맞은 것을 고르시요.
 ### 질문: 곡선 xy = 8에서 원점까지 최단 거리를 구하십시오.
 ### 선택지: 

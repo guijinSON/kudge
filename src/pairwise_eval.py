@@ -25,6 +25,8 @@ def main(input_path, data, output_path):
         data_path = f'data/k2-eval-pairwise.csv'
     elif data == 'false_info':
         data_path = f'data/k2-eval-pairwise-falseinfo.csv'
+    elif data == 'challenge':
+        data_path = f'data/kudge-challenge.csv'
         
     pairwise = pd.read_csv(data_path)
     results = pd.DataFrame()

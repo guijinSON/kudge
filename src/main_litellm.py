@@ -10,6 +10,8 @@ def main(mode, subset, model_name, api_key, base_url, output_path):
         data = pd.read_csv(f'data/k2-eval-{mode}.csv')
     elif subset == 'false_info':
         data = pd.read_csv(f'data/k2-eval-{mode}-falseinfo.csv')
+    elif subset == 'challenge:'
+        data = pd.read_csv(f'data/kudge-challenge.csv')
         
     queries = data['judge_query'].values
     outputs = get_model_outputs_litellm(client, model_name, queries)
