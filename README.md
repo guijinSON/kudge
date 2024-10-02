@@ -1,6 +1,6 @@
-# KUDGE: A Benchmark for Korean LLM-as-a-Judge
+# KUDGE: A BILINGUAL BENCHMARK FOR AUTOMATED JUDGES
 
-This is the official repository for KUDGE, a dataset aimed to evaluate LLMs in judging Korean responses.
+This is the official repository for KUDGE, a dataset aimed to evaluate LLMs in judging.
 
 # Quick Usage 
 
